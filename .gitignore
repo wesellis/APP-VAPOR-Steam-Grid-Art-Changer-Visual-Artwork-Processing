@@ -1,0 +1,97 @@
+# VAPOR - Git Ignore File
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Development and Testing
+test_*.py
+*_test.py
+*_BACKUP.*
+monitor_*.py
+update_*.py
+advanced_*.py
+
+# User Data (Never commit personal information)
+user_configs/*.json
+!user_configs/README.txt
+active_profile.txt
+*profile_backup*
+Mookyjooky*
+
+# Runtime Directories
+artwork_preview/
+game_cache/
+logs/
+sessions/
+
+# Build and Distribution
+build/
+dist/
+*.exe
+
+# Development Documentation
+DEVELOPMENT_*.md
+PROJECT_*.md
+ARCHITECTURE_*.md
+IMPLEMENTATION_*.md
+IMPROVEMENTS*.md
+MONETIZATION_*.md
+NEXT_PHASE_*.md
+QUICK_REFERENCE*.md
+UI_MODULARIZATION_*.md
+
+# Batch Files (Development only)
+BUILD_*.bat
+CLEAN_*.bat
+DIRECT_*.bat
+FINAL_*.bat
+FIXED_*.bat
+SIMPLE_*.bat
+START.bat
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log

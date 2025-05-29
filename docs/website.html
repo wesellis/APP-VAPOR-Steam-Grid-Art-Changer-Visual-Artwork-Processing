@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAPOR - Transform Your Steam Library</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e2124 0%, #2c2f33 100%);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 2rem 0;
+            background: rgba(54, 57, 63, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #43b581, #7289da);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #43b581;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffffff, #43b581);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #b0b3b8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #43b581, #36bb7c);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(67, 181, 129, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(67, 181, 129, 0.4);
+        }
+        
+        /* Features */
+        .features {
+            padding: 4rem 0;
+            background: rgba(30, 33, 36, 0.5);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(54, 57, 63, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: #43b581;
+            margin-bottom: 1rem;
+        }
+        
+        /* Screenshots */
+        .screenshots {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .screenshots h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+        
+        .screenshot {
+            background: rgba(54, 57, 63, 0.8);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+        
+        .screenshot img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .screenshot-caption {
+            padding: 1rem;
+            font-weight: bold;
+            color: #43b581;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            background: rgba(30, 33, 36, 0.9);
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: #b0b3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #43b581;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="Vapor_Logo.png" alt="VAPOR Logo">
+                    <h1>VAPOR</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#features">Features</a>
+                    <a href="#screenshots">Screenshots</a>
+                    <a href="#download">Download</a>
+                    <a href="https://github.com/wesellis/vapor" target="_blank">GitHub</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Transform Your Steam Library</h2>
+                <p>Professional artwork for every game, installed automatically in minutes</p>
+                <a href="#download" class="cta-button">🚀 Download Free</a>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Why Choose VAPOR?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>One-Click Magic</h3>
+                        <p>Transform your entire Steam library automatically. Process 1000+ games in under 30 minutes with zero manual work.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Steam Deck Ready</h3>
+                        <p>Optimized for Steam Deck with touch-friendly interface and perfect 1200×800 resolution support.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>3.5x faster than manual processing with 90% cache hit rate and intelligent connection pooling.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Universal Compatible</h3>
+                        <p>Works on Windows, Linux, Steam Deck, and any Steam installation. Professional AppData usage.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Complete Coverage</h3>
+                        <p>Grid images, hero banners, logo overlays, and icons. See ALL available artwork, not just 10 options.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💎</div>
+                        <h3>Professional Grade</h3>
+                        <p>Enterprise-level logging, error handling, memory management, and performance monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="screenshots" id="screenshots">
+            <div class="container">
+                <h2>See VAPOR in Action</h2>
+                <div class="screenshot-grid">
+                    <div class="screenshot">
+                        <img src="screenshots/Vapor Ready.png" alt="VAPOR Interface">
+                        <div class="screenshot-caption">Professional interface ready to transform your library</div>
+                    </div>
+                    <div class="screenshot">
+                        <img src="screenshots/Game Image Select.png" alt="Artwork Selection">
+                        <div class="screenshot-caption">Browse unlimited artwork with quality ratings</div>
+                    </div>
+                    <div class="screenshot">
+                        <img src="screenshots/Auto-Enhancing.png" alt="Auto Enhancement">
+                        <div class="screenshot-caption">Watch real-time progress as VAPOR works its magic</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero" id="download">
+            <div class="container">
+                <h2>Ready to Transform Your Library?</h2>
+                <p>Download VAPOR v2.0.0 - completely free and open source</p>
+                <a href="https://github.com/wesellis/vapor/releases/latest" class="cta-button" target="_blank">📦 Download Now</a>
+                <p style="margin-top: 2rem; color: #b0b3b8;">
+                    16MB standalone executable • No Python required • Works immediately
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/wesellis/vapor" target="_blank">GitHub</a>
+                <a href="https://github.com/wesellis/vapor/releases" target="_blank">Releases</a>
+                <a href="https://github.com/wesellis/vapor/issues" target="_blank">Support</a>
+                <a href="mailto:wes@wesellis.com">Contact</a>
+            </div>
+            <p>&copy; 2025 Wesley Ellis. VAPOR is open source under MIT License.</p>
+        </div>
+    </footer>
+</body>
+</html>
