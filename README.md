@@ -1,6 +1,11 @@
 # VAPOR 🎮
 **Visual Artwork Processing & Organization Resource**
 
+![Downloads](https://img.shields.io/github/downloads/wesellis/VAPOR/total?style=for-the-badge&color=brightgreen)
+![Stars](https://img.shields.io/github/stars/wesellis/VAPOR?style=for-the-badge&color=yellow)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Steam%20Deck-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
 Transform your Steam library into a visual masterpiece with one click! VAPOR automatically finds and installs high-quality artwork for all your Steam games, turning your library from bland to beautiful in minutes.
 
 ![VAPOR Logo](assets/Vapor_Logo.png)
