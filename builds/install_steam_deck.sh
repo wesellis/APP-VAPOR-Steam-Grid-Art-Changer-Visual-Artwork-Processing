@@ -8,7 +8,7 @@ mkdir -p ~/.local/share/applications
 mkdir -p ~/.local/share/icons
 
 # Copy executable
-cp VAPOR_SteamDeck_x64 ~/.local/bin/vapor
+cp VAPOR_SteamDeck_v2.0.1 ~/.local/bin/vapor
 chmod +x ~/.local/bin/vapor
 
 # Copy desktop file

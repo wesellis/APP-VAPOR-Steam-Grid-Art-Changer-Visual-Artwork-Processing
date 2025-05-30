@@ -8,7 +8,7 @@ mkdir -p ~/.local/share/applications
 mkdir -p ~/.local/share/icons
 
 # Copy executable
-cp VAPOR_Linux_x64 ~/.local/bin/vapor
+cp VAPOR_Linux_v2.0.1 ~/.local/bin/vapor
 chmod +x ~/.local/bin/vapor
 
 # Copy desktop file
