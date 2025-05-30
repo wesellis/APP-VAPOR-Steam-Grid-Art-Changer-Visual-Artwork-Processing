@@ -5,9 +5,8 @@
 ![Stars](https://img.shields.io/github/stars/wesellis/VAPOR?style=for-the-badge&color=yellow)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Steam%20Deck-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-v2.0.1-purple?style=for-the-badge)
 
-> ⚡ **Transform your Steam library in minutes with AI-powered artwork enhancement** - Steam Deck optimized, cross-platform, processes 1000+ games automatically
+Transform your Steam library into a visual masterpiece with one click! VAPOR automatically finds and installs high-quality artwork for all your Steam games, turning your library from bland to beautiful in minutes.
 
 ![VAPOR Logo](assets/Vapor_Logo.png)
 
@@ -15,252 +14,205 @@
 
 ## 🌟 **What is VAPOR?**
 
-VAPOR is a **revolutionary Steam Grid Artwork Manager** that transforms your entire Steam library into a visual masterpiece with one click. No more manually searching for artwork - VAPOR automatically finds and installs the highest quality artwork for ALL your games in minutes.
+VAPOR is a professional Steam Grid Artwork Manager that revolutionizes how you manage your Steam library's visual appearance. Instead of manually finding artwork for hundreds of games, VAPOR does it all automatically with world-class performance and reliability.
 
-### **🎯 Core Features**
+### **🎯 Key Features**
 
 - **🚀 One-Click Auto-Enhancement** - Transform your entire Steam library automatically
-- **⚡ Lightning Fast Processing** - 1000+ games in under 25 minutes (3.5x faster than manual)
-- **🎮 Steam Deck Optimized** - Perfect 1200×800 touch-friendly interface
-- **🎨 Complete Artwork Suite** - Grid images, hero banners, logos, and icons
-- **🌐 Universal Compatibility** - Windows, Steam Deck, Linux, macOS, portable installs
-- **🔥 Unlimited Artwork** - Browse ALL available options (no artificial limits)
-- **💎 Professional Quality** - Enterprise-grade performance with 90% cache hit rate
+- **🎨 Complete Artwork Coverage** - Grid images, hero banners, logos, and icons
+- **⚡ Lightning Fast** - Process 1000+ games in under 30 minutes
+- **🎮 Universal Compatibility** - Windows, Steam Deck, Linux, portable installs
+- **🔥 Show ALL Artwork** - No artificial limits, see every available option
+- **💎 Professional Quality** - Enterprise-grade performance and reliability
 
 ---
 
 ## 📸 **See VAPOR in Action**
 
-<table>
-<tr>
-<td width="33%">
-
-### **🎮 Steam Deck Ready**
+### **Ready to Transform Your Library**
 ![VAPOR Ready](screenshots/Vapor%20Ready.png)
-*Touch-optimized interface perfect for Steam Deck*
+*Professional interface with Steam Deck optimization and responsive design*
 
-</td>
-<td width="33%">
-
-### **🎨 Unlimited Artwork**
+### **Choose from ALL Available Artwork**
 ![Game Selection](screenshots/Game%20Image%20Select.png)
-*Browse thousands of high-quality artwork options*
+*Browse unlimited artwork options with quality ratings and community votes*
 
-</td>
-<td width="33%">
-
-### **⚡ Auto-Enhancement**
+### **Watch the Magic Happen**
 ![Auto Enhancement](screenshots/Auto-Enhancing.png)
-*Watch your library transform with real-time progress*
-
-</td>
-</tr>
-</table>
+*Real-time progress tracking with statistics and success metrics*
 
 ---
 
-## 🚀 **Quick Start Guide**
+## 🚀 **Quick Start**
 
-### **📦 Installation (30 seconds)**
-1. **[📥 Download Latest Release](../../releases)** - Get `VAPOR_v2.0.1.exe` (no Python needed!)
-2. **🔑 Get Free API Keys**:
-   - [Steam Web API Key](https://steamcommunity.com/dev/apikey) (30 seconds)
-   - [SteamGridDB API Key](https://www.steamgriddb.com/profile/preferences/api) (1 minute)
-3. **▶️ Run VAPOR** → Create Profile → **Auto-Enhance All Games** ✨
+### **📦 Download & Run**
+1. **Download** the latest `VAPOR_v2.0.0.exe` from [Releases](../../releases)
+2. **Run** the executable (no Python installation required!)
+3. **Get API Keys** (free):
+   - [Steam Web API Key](https://steamcommunity.com/dev/apikey)
+   - [SteamGridDB API Key](https://www.steamgriddb.com/profile/preferences/api)
+4. **Create Profile** with your Steam ID and API keys
+5. **Click "Auto-Enhance All Games"** and watch the magic! ✨
 
-### **⏱️ Processing Speed**
-| Library Size | Processing Time | Games per Minute |
-|--------------|----------------|------------------|
-| 100 games    | ~3 minutes     | ~33 games/min    |
-| 500 games    | ~12 minutes    | ~42 games/min    |
-| 1000+ games  | ~25 minutes    | ~40 games/min    |
+### **⏱️ Time Estimates**
+- **100 games**: ~3 minutes
+- **500 games**: ~12 minutes  
+- **1000+ games**: ~25 minutes
 
-*Performance varies by internet speed and SteamGridDB response times*
+*Actual time depends on your internet speed and SteamGridDB response times*
 
 ---
 
-## ✨ **Why VAPOR is Revolutionary**
+## ✨ **Why Choose VAPOR?**
 
-### **🔥 Auto-Enhancement Technology**
-- **Zero Manual Work** - AI selects the best artwork automatically using community ratings
-- **Complete Coverage** - Processes both played AND unplayed games (unlike competitors)
-- **Smart Selection Algorithm** - Chooses highest quality artwork with perfect sizing
-- **Real-Time Insights** - Live statistics and success tracking during processing
+### **🔥 Revolutionary Auto-Enhancement**
+- **Zero Manual Work** - Automatically selects the best artwork for every game
+- **Complete Coverage** - Processes both played AND unplayed games
+- **Smart Selection** - Chooses highest quality artwork using community ratings
+- **Real-Time Progress** - Watch your library transform with live statistics
 
 ### **⚡ World-Class Performance**
-- **3.5x Faster** than manual artwork management
-- **90% Cache Hit Rate** - Lightning-fast repeat operations
-- **Memory Optimized** - 50% less memory usage with automatic cleanup
+- **3.5x Faster** than manual processing
+- **90% Cache Hit Rate** - Repeat searches are lightning fast
+- **Memory Efficient** - Uses 50% less memory with automatic cleanup
 - **Professional Logging** - Comprehensive error tracking and performance monitoring
-- **Network Resilience** - Intelligent auto-retry with exponential backoff
 
-### **🌍 Platform Excellence**
-- **Windows 10/11** - Native integration with proper AppData storage
-- **Steam Deck** - Optimized 1200×800 interface, touch-friendly controls, Gaming Mode compatible
-- **Linux** - Full compatibility (Ubuntu, Fedora, Arch, SteamOS)
-- **Portable Steam** - Works with ANY Steam installation (15+ detection paths)
+### **🌍 Universal Compatibility**
+- **Windows 10/11** - Full support with professional AppData usage
+- **Steam Deck** - Optimized 1200×800 interface with touch-friendly design
+- **Linux** - Complete compatibility with all major distributions
+- **Portable Steam** - Works with any Steam installation anywhere
 
-### **🎨 Professional Artwork Management**
-- **All Artwork Types**: Grid Images (600×900 & 920×430), Hero Banners (1920×620), Logo Overlays, Game Icons (256×256)
-- **Quality Indicators** - Community ratings, vote counts, and quality scores
+### **🎨 Complete Artwork Management**
+- **Unlimited Options** - See ALL available artwork (removed artificial 10-image limit)
+- **All Formats Supported**:
+  - 📐 **Grid Images** (Vertical 600×900 & Horizontal 920×430)
+  - 🎯 **Hero Banners** (1920×620 showcase images)
+  - 🏷️ **Logo Overlays** (Transparent branding)
+  - 🔸 **Game Icons** (256×256 shortcuts)
+- **Quality Indicators** - Community ratings and vote counts for informed choices
 - **Perfect Sizing** - Optimal dimensions for exact screen utilization
-- **Unlimited Browsing** - See ALL available options (removed 10-image artificial limit)
 
 ---
 
-## 🛡️ **Enterprise-Grade Features**
+## 🛡️ **Professional Grade Quality**
 
-### **🔧 Professional Architecture**
-- **Modular Design** - Clean separation of concerns with professional code structure
-- **Cross-Platform Steam Detection** - Supports 15+ installation paths including portable installs
+### **🔧 Enterprise Features**
+- **Professional Directory Management** - Files stored in proper AppData locations
 - **Enhanced Input Validation** - Comprehensive error prevention with user-friendly messages
-- **Memory Leak Prevention** - Automatic garbage collection during extended sessions
-- **Professional Directory Management** - Files stored in proper system locations
+- **Cross-Platform Steam Detection** - Supports 15+ installation paths
+- **Memory Leak Prevention** - Automatic garbage collection during long sessions
+- **Intelligent Auto-Retry** - Handles network issues with exponential backoff
 
-### **📊 Advanced Monitoring**
-- **Real-Time API Performance** - Monitor response times and optimize automatically
-- **Detailed Statistics** - Success rates, processing speeds, comprehensive error tracking
-- **Cache Efficiency Metrics** - Track and optimize cache hit rates for maximum performance
+### **📊 Performance Monitoring**
+- **Real-Time API Tracking** - Monitor response times and cache efficiency
+- **Detailed Statistics** - Success rates, processing speeds, error tracking
 - **Professional Logging** - Comprehensive logs stored in system-appropriate locations
 
 ---
 
-## 🎯 **Perfect For Every User**
+## 🎯 **Perfect For**
 
-| User Type | Key Benefits |
-|-----------|-------------|
-| **🎮 Casual Gamers** | One-click library transformation, no technical knowledge required |
-| **📱 Steam Deck Users** | Touch-optimized interface, perfect screen utilization, Gaming Mode support |
-| **🖥️ Linux Enthusiasts** | Native Linux support, open-source transparency, professional Steam tools |
-| **⚡ Power Users** | Advanced automation, performance monitoring, comprehensive customization |
-| **🎨 Library Perfectionists** | Unlimited artwork options, quality ratings, professional curation tools |
+- **🎮 Gamers** with large Steam libraries who want them to look amazing
+- **📱 Steam Deck Users** who need touch-optimized artwork management
+- **🖥️ Linux Users** who want professional Steam library tools
+- **⚡ Power Users** who value automation and efficiency
+- **🎨 Perfectionists** who want their Steam library to look professionally curated
 
 ---
 
 ## 💻 **System Requirements**
 
-### **Minimum Specifications**
-- **Operating System**: Windows 10, Linux (any distro), Steam Deck, macOS 10.14+
-- **Memory**: 4GB RAM (2GB during processing)
+### **Minimum Requirements**
+- **OS**: Windows 10, Linux, Steam Deck, or any system with Steam
+- **RAM**: 4GB (2GB during processing)
 - **Storage**: 100MB for application + cache space
 - **Network**: Internet connection for artwork downloads
-- **Dependencies**: Steam installed and configured
+- **Steam**: Installed and configured
 
-### **Recommended for Optimal Performance**
-- **Memory**: 8GB+ RAM for large libraries (1000+ games)
-- **Network**: Broadband connection for faster downloads
-- **Storage**: 500MB+ free space for artwork cache and temporary files
-
----
-
-## 🔧 **Technical Excellence**
-
-### **Core Technologies**
-- **Python 3.8+** with enterprise-grade libraries and professional error handling
-- **Advanced GUI** - Responsive Tkinter interface with Steam Deck optimization
-- **Image Processing** - PIL/Pillow with intelligent optimization and format conversion
-- **Network Layer** - Requests with connection pooling and intelligent retry mechanisms
-- **Professional Architecture** - Modular design with clean separation and maintainable code
-
-### **API Integration & Performance**
-- **Steam Web API** - Official Valve integration for library access
-- **SteamGridDB API** - Comprehensive artwork database with smart caching
-- **Connection Pooling** - 30-40% faster API calls through HTTP optimization
-- **Intelligent Caching** - 90% cache hit rate with automatic memory management
-- **Error Recovery** - Exponential backoff retry with circuit breaker patterns
+### **Recommended**
+- **RAM**: 8GB+ for processing large libraries
+- **Network**: Broadband for faster artwork downloads
+- **Storage**: 500MB+ free space for artwork cache
 
 ---
 
-## 🚀 **Roadmap: VAPOR Pro Features**
+## 🔧 **Technical Specifications**
 
-### **Coming Soon**
+### **Built With Professional Tools**
+- **Python 3.8+** with enterprise-grade libraries
+- **Tkinter GUI** with responsive design and professional theming
+- **PIL/Pillow** for advanced image processing and optimization
+- **Requests** with connection pooling and intelligent retry logic
+- **Professional Architecture** with modular design and clean separation
+
+### **API Integration**
+- **Steam Web API** - Official Steam library access
+- **SteamGridDB API** - Comprehensive artwork database
+- **Connection Pooling** - 30-40% faster API calls with HTTP optimization
+- **Smart Caching** - 90% cache hit rate with intelligent response caching
+
+---
+
+## 🚀 **Coming Soon: VAPOR Pro**
+
+We're working on advanced features for power users:
+
 - **🎮 Non-Steam Game Integration** - Add Epic, GOG, Origin games to Steam with custom artwork
-- **🤖 AI-Powered Recommendations** - Machine learning for personalized artwork suggestions
-- **📊 Advanced Analytics Dashboard** - Detailed library statistics and processing insights
-- **🎨 Custom Artwork Upload** - Use your own images and community artwork sharing
-- **⚡ Priority API Access** - Faster processing and exclusive features for Pro subscribers
-- **🌐 Cloud Sync** - Backup preferences and artwork across multiple devices
+- **🤖 AI-Powered Artwork Selection** - Machine learning recommendations based on your preferences  
+- **📊 Advanced Analytics** - Detailed library statistics and processing insights
+- **🎨 Custom Artwork Upload** - Use your own images and artwork
+- **⚡ Priority API Access** - Faster processing for Pro subscribers
 
-*⭐ Star this repo and watch for updates on Pro features!*
-
----
-
-## 🤝 **Contributing to VAPOR**
-
-We welcome all contributions! Here's how you can help:
-
-### **🐛 Report Issues**
-Found a bug? [Create an issue](../../issues) with:
-- Operating system and version
-- Steps to reproduce
-- Expected vs actual behavior
-- Screenshots if applicable
-
-### **💡 Suggest Features**
-Have an idea? [Start a discussion](../../discussions) or [create a feature request](../../issues)
-
-### **📖 Improve Documentation**
-Help other users by improving guides, adding examples, or translating content
-
-### **🧪 Beta Testing**
-Test new features on different systems and provide feedback
-
-### **⭐ Spread the Word**
-Share VAPOR with fellow gamers on Reddit, Discord, Steam forums, and social media
+*Want early access? Star this repo and follow for updates!*
 
 ---
 
-## 📄 **Open Source License**
+## 🤝 **Contributing**
 
-**MIT License** - Free for personal and commercial use forever
+We welcome contributions! Whether it's:
 
-VAPOR is completely open source - inspect the code, contribute improvements, or fork for your own projects. See [LICENSE](LICENSE) for full details.
+- 🐛 **Bug Reports** - Help us improve reliability
+- 💡 **Feature Requests** - Tell us what you'd love to see
+- 📖 **Documentation** - Help other users get started
+- 🧪 **Testing** - Try VAPOR on different systems
+- ⭐ **Spreading the Word** - Share with fellow gamers!
 
 ---
 
-## 🙏 **Acknowledgments & Thanks**
+## 📄 **License**
 
-- **[SteamGridDB](https://www.steamgriddb.com/)** - Providing the comprehensive artwork database that makes VAPOR possible
-- **Steam Community** - Creating and sharing amazing artwork that brings games to life
-- **Beta Testers** - Helping make VAPOR rock-solid reliable across all platforms
-- **Open Source Community** - For the incredible tools and libraries that power VAPOR
-- **Contributors** - Everyone who has helped improve VAPOR with code, documentation, and feedback
+**MIT License** - Free for personal and commercial use
+
+See [LICENSE](LICENSE) for full details.
+
+---
+
+## 🙏 **Acknowledgments**
+
+- **SteamGridDB** - For providing the comprehensive artwork database
+- **Steam Community** - For creating and sharing amazing artwork
+- **Beta Testers** - For helping make VAPOR rock-solid reliable
+- **Open Source Community** - For the tools and libraries that make this possible
 
 ---
 
 ## 📬 **Support & Community**
 
-### **Get Help**
-- **🐛 Bug Reports**: [GitHub Issues](../../issues)
-- **💬 Community Discussion**: [GitHub Discussions](../../discussions)
-- **📧 Direct Contact**: [wes@wesellis.com](mailto:wes@wesellis.com)
-- **📖 Documentation**: [Wiki](../../wiki) (coming soon)
-
-### **Stay Updated**
-- **🌟 Star this Repository** for notifications on new releases
-- **👀 Watch** for important updates and announcements
-- **📱 Follow** [@wesellis](https://github.com/wesellis) for development updates
+- **🐛 Issues**: [GitHub Issues](../../issues)
+- **💬 Discussions**: [GitHub Discussions](../../discussions)  
+- **📧 Contact**: wes@wesellis.com
+- **🌟 Updates**: Watch this repo for new releases
 
 ---
 
-## ⭐ **Love VAPOR? Show Your Support!**
+## ⭐ **Star This Project**
 
-If VAPOR has transformed your Steam library and saved you hours of manual work, please:
+If VAPOR helps transform your Steam library, please star this project! It helps others discover this tool and motivates continued development.
 
-1. **⭐ Star this repository** - Helps others discover VAPOR
-2. **🔄 Share with friends** - Spread the word in gaming communities  
-3. **💬 Leave feedback** - Your experience helps improve VAPOR
-4. **🤝 Contribute** - Code, documentation, or testing help
-
-**Ready to transform your Steam library? [Download VAPOR now](../../releases) and see the difference!** 🎮✨
+**Transform your Steam library today - download VAPOR and see the difference!** 🎮✨
 
 ---
 
-<div align="center">
-
-**Created with ❤️ by [Wesley Ellis](mailto:wes@wesellis.com)**  
-*VAPOR v2.0.1 - May 2025*
-
-[⬆️ Back to Top](#vapor-)
-
-</div>
+*Created with ❤️ by [Wesley Ellis](mailto:wes@wesellis.com)*  
+*VAPOR v2.0.0 - February 2025*
