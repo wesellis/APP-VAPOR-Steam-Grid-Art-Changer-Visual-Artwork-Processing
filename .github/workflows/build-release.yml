@@ -1,0 +1,193 @@
+name: Build Multi-Platform Executables
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag'
+        required: true
+        default: 'v2.0.0'
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyinstaller pillow requests
+    
+    - name: Build Windows executable
+      run: |
+        python build_multiplatform.py windows
+    
+    - name: Upload Windows artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: VAPOR-Windows
+        path: builds/VAPOR_Windows_*.exe
+        
+    - name: Upload Windows package
+      uses: actions/upload-artifact@v3
+      with:
+        name: VAPOR-Windows-Package
+        path: builds/VAPOR_Windows_*.zip
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y python3-tk upx-ucl
+    
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyinstaller pillow requests
+    
+    - name: Build Linux executable
+      run: |
+        python build_multiplatform.py linux
+    
+    - name: Build Steam Deck executable
+      run: |
+        python build_multiplatform.py steamdeck
+    
+    - name: Upload Linux artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: VAPOR-Linux
+        path: |
+          builds/VAPOR_Linux_*
+          builds/VAPOR.desktop
+          builds/install_linux.sh
+          
+    - name: Upload Steam Deck artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: VAPOR-SteamDeck
+        path: |
+          builds/VAPOR_SteamDeck_*
+          builds/VAPOR_SteamDeck.desktop
+          builds/install_steam_deck.sh
+          
+    - name: Upload Linux packages
+      uses: actions/upload-artifact@v3
+      with:
+        name: VAPOR-Linux-Packages
+        path: builds/VAPOR_*_v*.zip
+
+  build-macos:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyinstaller pillow requests
+    
+    - name: Build macOS application
+      run: |
+        python build_multiplatform.py macos
+    
+    - name: Upload macOS artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: VAPOR-macOS
+        path: builds/VAPOR_macOS.app
+        
+    - name: Upload macOS package
+      uses: actions/upload-artifact@v3
+      with:
+        name: VAPOR-macOS-Package
+        path: builds/VAPOR_macOS_*.zip
+
+  create-release:
+    needs: [build-windows, build-linux, build-macos]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Download all artifacts
+      uses: actions/download-artifact@v3
+    
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: ${{ github.ref_name }}
+        name: VAPOR ${{ github.ref_name }}
+        body: |
+          🎨 **VAPOR - Visual Artwork Processing & Organization Resource**
+          
+          Multi-platform release with executables for:
+          - 🪟 **Windows** (x64) - Full installer package
+          - 🐧 **Linux** (x64) - Native executable with desktop integration
+          - 🎮 **Steam Deck** - Optimized for SteamOS/Arch Linux
+          - 🍎 **macOS** - Universal application bundle
+          
+          ## What's New in v2.0.0
+          - World-class performance optimizations
+          - Steam Deck responsive design (1200×800 default)
+          - Show ALL available artwork (no more 10-image limits)
+          - Enhanced input validation and error handling
+          - Cross-platform Steam detection (15+ installation paths)
+          - Memory management improvements
+          - Real-time performance monitoring
+          
+          ## Installation
+          
+          ### Windows
+          1. Download `VAPOR_Windows_v2.0.0.zip`
+          2. Extract and run `install_windows.bat` as Administrator
+          3. Launch VAPOR from your desktop shortcut
+          
+          ### Linux/Steam Deck
+          1. Download `VAPOR_Linux_v2.0.0.zip` or `VAPOR_SteamDeck_v2.0.0.zip`
+          2. Extract and run `./install_linux.sh` or `./install_steam_deck.sh`
+          3. Launch from your application menu or run `vapor` in terminal
+          
+          ### macOS
+          1. Download `VAPOR_macOS_v2.0.0.zip`
+          2. Extract and drag `VAPOR.app` to your Applications folder
+          3. Launch from Launchpad or Applications folder
+          
+          ## Requirements
+          - Steam installed and configured
+          - Steam Web API Key (free from steamcommunity.com/dev/apikey)
+          - SteamGridDB API Key (free from steamgriddb.com)
+          
+          **Transform your Steam library with one-click automation! 🚀**
+        files: |
+          VAPOR-Windows-Package/*
+          VAPOR-Linux-Packages/*
+          VAPOR-macOS-Package/*
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

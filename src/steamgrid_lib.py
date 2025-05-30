@@ -16,6 +16,14 @@ from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 import logging
 
+# Import enhanced performance utilities
+try:
+    from utilities.enhanced_performance import EnhancedRetryMechanism, IntelligentCache
+except ImportError:
+    # Fallback for standalone operation
+    EnhancedRetryMechanism = None
+    IntelligentCache = None
+
 class SteamGridAPI:
     """Interface for SteamGridDB API operations with enhanced performance and monitoring"""
     
@@ -26,9 +34,20 @@ class SteamGridAPI:
         self.session = requests.Session()
         self.session.headers.update(self.headers)
         
-        # Simple in-memory cache for game lookups (session-based)
+        # Enhanced caching system
         self._game_cache = {}  # appid -> game_data
         self._artwork_cache = {}  # (game_id, art_type) -> artwork_list
+        
+        # Initialize enhanced retry mechanism
+        self.retry_mechanism = EnhancedRetryMechanism() if EnhancedRetryMechanism else None
+        
+        # Initialize intelligent cache
+        try:
+            from vapor_paths import vapor_paths
+            cache_dir = vapor_paths.artwork_cache_dir / "api_cache"
+            self.intelligent_cache = IntelligentCache(cache_dir) if IntelligentCache else None
+        except ImportError:
+            self.intelligent_cache = None
         
         # Performance monitoring
         self._performance_stats = {
@@ -74,9 +93,17 @@ class SteamGridAPI:
             print(f"Cache hit for AppID {appid} (saves {self._performance_stats['api_calls_cached']}/{self._performance_stats['api_calls_total']} = {100*self._performance_stats['api_calls_cached']/self._performance_stats['api_calls_total']:.1f}% cached)")
             return self._game_cache[appid]
         
-        try:
+        def _api_call():
             url = f"{self.base_url}/games/steam/{appid}"
-            response = self.session.get(url, timeout=15)  # Increased timeout
+            response = self.session.get(url, timeout=15)
+            return response
+        
+        try:
+            # Use enhanced retry mechanism if available
+            if self.retry_mechanism:
+                response = self.retry_mechanism.execute_with_retry(_api_call)
+            else:
+                response = _api_call()
             
             if response.status_code == 200:
                 data = response.json()
@@ -150,7 +177,7 @@ class SteamGridAPI:
         if artwork_type not in endpoint_map:
             raise ValueError(f"Invalid artwork type: {artwork_type}")
         
-        try:
+        def _api_call():
             url = f"{self.base_url}/{endpoint_map[artwork_type]}/game/{game_id}"
             params = {}
             
@@ -161,7 +188,15 @@ class SteamGridAPI:
             if dimensions:
                 params["dimensions"] = ",".join(dimensions)
             
-            response = self.session.get(url, params=params, timeout=15)  # Increased timeout
+            response = self.session.get(url, params=params, timeout=15)
+            return response
+        
+        try:
+            # Use enhanced retry mechanism if available
+            if self.retry_mechanism:
+                response = self.retry_mechanism.execute_with_retry(_api_call)
+            else:
+                response = _api_call()
             
             if response.status_code == 200:
                 data = response.json()

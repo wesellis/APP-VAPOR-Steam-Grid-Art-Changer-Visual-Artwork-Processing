@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=VAPOR
+Comment=Visual Artwork Processing & Organization Resource
+Exec=./VAPOR_Linux_x64
+Icon=vapor
+Terminal=false
+Categories=Game;Utility;
+StartupWMClass=VAPOR
