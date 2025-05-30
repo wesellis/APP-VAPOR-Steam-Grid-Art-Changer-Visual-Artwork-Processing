@@ -57,7 +57,8 @@ a = Analysis(
     pathex=[r'{self.project_root}', r'{self.src_dir}'],
     binaries=[],
     datas=[
-        ('Vapor_Logo.png', '.'),
+        ('assets/Vapor_Logo.png', 'assets'),
+        ('assets/Vapor_Icon.png', 'assets'),
         ('src/ui', 'ui'),
         ('src/models', 'models'),
         ('src/utilities', 'utilities'),
@@ -130,7 +131,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=r'{self.project_root}/Vapor_Icon.png' if (Path(r'{self.project_root}/Vapor_Icon.png')).exists() else (r'{self.project_root}/Vapor_Logo.png' if (Path(r'{self.project_root}/Vapor_Logo.png')).exists() else None),
+    icon=r'{self.project_root}/assets/Vapor_Icon.png' if (Path(r'{self.project_root}/assets/Vapor_Icon.png')).exists() else (r'{self.project_root}/assets/Vapor_Logo.png' if (Path(r'{self.project_root}/assets/Vapor_Logo.png')).exists() else None),
 )
 '''
 
@@ -196,7 +197,8 @@ a = Analysis(
     pathex=[r'{self.project_root}', r'{self.src_dir}'],
     binaries=[],
     datas=[
-        ('Vapor_Logo.png', '.'),
+        ('assets/Vapor_Logo.png', 'assets'),
+        ('assets/Vapor_Icon.png', 'assets'),
         ('src/ui', 'ui'),
         ('src/models', 'models'),
         ('src/utilities', 'utilities'),
@@ -274,7 +276,7 @@ exe = EXE(
 app = BUNDLE(
     exe,
     name='VAPOR.app',
-    icon=r'{self.project_root}/Vapor_Icon.png' if (Path(r'{self.project_root}/Vapor_Icon.png')).exists() else (r'{self.project_root}/Vapor_Logo.png' if (Path(r'{self.project_root}/Vapor_Logo.png')).exists() else None),
+    icon=r'{self.project_root}/assets/Vapor_Icon.png' if (Path(r'{self.project_root}/assets/Vapor_Icon.png')).exists() else (r'{self.project_root}/assets/Vapor_Logo.png' if (Path(r'{self.project_root}/assets/Vapor_Logo.png')).exists() else None),
     bundle_identifier='com.wesellis.vapor',
     info_plist={{
         'NSHighResolutionCapable': 'True',

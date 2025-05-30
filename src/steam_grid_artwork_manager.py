@@ -142,9 +142,14 @@ class VaporArtworkManager:
         try:
             # Try to load the icon from various locations
             icon_paths = [
-                Path("Vapor_Logo.png"),  # Current directory
-                Path(sys.executable).parent / "Vapor_Logo.png",  # Next to .exe
-                Path(__file__).parent / "Vapor_Logo.png",  # Next to script
+                Path("assets/Vapor_Icon.png"),  # New assets directory
+                Path("assets/Vapor_Logo.png"),  # Fallback to logo in assets
+                Path("Vapor_Icon.png"),  # Legacy location (current directory)
+                Path("Vapor_Logo.png"),  # Legacy logo location
+                Path(sys.executable).parent / "assets" / "Vapor_Icon.png",  # Next to .exe in assets
+                Path(sys.executable).parent / "Vapor_Icon.png",  # Next to .exe (legacy)
+                Path(__file__).parent.parent / "assets" / "Vapor_Icon.png",  # Relative to script in assets
+                Path(__file__).parent.parent / "Vapor_Icon.png",  # Relative to script (legacy)
             ]
             
             for icon_path in icon_paths:

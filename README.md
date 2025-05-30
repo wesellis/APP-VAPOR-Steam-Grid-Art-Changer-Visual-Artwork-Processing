@@ -3,7 +3,7 @@
 
 Transform your Steam library into a visual masterpiece with one click! VAPOR automatically finds and installs high-quality artwork for all your Steam games, turning your library from bland to beautiful in minutes.
 
-![VAPOR Logo](Vapor_Logo.png)
+![VAPOR Logo](assets/Vapor_Logo.png)
 
 ---
 
