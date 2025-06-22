@@ -142,14 +142,9 @@ class VaporArtworkManager:
         try:
             # Try to load the icon from various locations
             icon_paths = [
-                Path("assets/Vapor_Icon.png"),  # New assets directory
-                Path("assets/Vapor_Logo.png"),  # Fallback to logo in assets
-                Path("Vapor_Icon.png"),  # Legacy location (current directory)
-                Path("Vapor_Logo.png"),  # Legacy logo location
-                Path(sys.executable).parent / "assets" / "Vapor_Icon.png",  # Next to .exe in assets
-                Path(sys.executable).parent / "Vapor_Icon.png",  # Next to .exe (legacy)
-                Path(__file__).parent.parent / "assets" / "Vapor_Icon.png",  # Relative to script in assets
-                Path(__file__).parent.parent / "Vapor_Icon.png",  # Relative to script (legacy)
+                Path("Vapor_Logo.png"),  # Current directory
+                Path(sys.executable).parent / "Vapor_Logo.png",  # Next to .exe
+                Path(__file__).parent / "Vapor_Logo.png",  # Next to script
             ]
             
             for icon_path in icon_paths:
@@ -232,16 +227,13 @@ class VaporArtworkManager:
         self.current_profile = profiles[profile_name]
         self.profile_label.config(text=f"Profile: {profile_name}", fg='#43b581')
         
-        # Initialize components with enhanced performance
+        # Initialize components
         self.steam_loader = SmartSteamLoader(
             api_key=self.current_profile['steam_web_api_key'],
             steam_id=self.current_profile['steam_id']
         )
         
         self.steamgrid_api = SteamGridAPI(self.current_profile['steamgrid_api_key'])
-        
-        # Optional: Check for updates (non-blocking)
-        self.check_for_updates_if_enabled()
         
         # Use 32-bit Steam ID for folder detection
         steam_id_32 = self.current_profile.get('steam_id_32', self.current_profile['steam_id'])
@@ -429,17 +421,10 @@ Do you want to continue?"""
             Thread(target=self.auto_search_and_install, args=(appid, game_name), daemon=True).start()
             return
         
-        # All games processed - show final performance summary with optimizations
+        # All games processed - show final performance summary
         if self.steamgrid_api:
-            print(f"\n=== Final Performance Summary (Enhanced v2.0.1) ===")
+            print(f"\n=== Final Performance Summary ===")
             self.steamgrid_api.print_performance_summary()
-            
-            # Clear cache after big operations to free memory
-            self.steamgrid_api.clear_cache()
-            
-            # Force garbage collection after processing
-            import gc
-            gc.collect()
         
         self.main_screens_manager.show_auto_enhance_complete(self.auto_enhance_stats)
     
@@ -983,38 +968,6 @@ Do you want to continue?"""
                 self.refresh_profile_list()
             else:
                 messagebox.showerror("Error", f"Failed to delete profile '{selected_name}'.")
-    
-    def check_for_updates_if_enabled(self):
-        """Check for updates in background (non-blocking)"""
-        def check_updates():
-            try:
-                from version import check_for_updates
-                update_info = check_for_updates()
-                
-                if update_info.get('update_available', False):
-                    def show_update_notification():
-                        latest = update_info['latest_version']
-                        download_url = update_info['download_url']
-                        
-                        result = messagebox.askyesno(
-                            "Update Available",
-                            f"VAPOR v{latest} is available!\n\n"
-                            f"You're running v2.0.1\n"
-                            f"Would you like to download the update?",
-                            icon='info'
-                        )
-                        
-                        if result:
-                            webbrowser.open(download_url)
-                    
-                    # Show notification in main thread
-                    self.root.after(0, show_update_notification)
-            except Exception:
-                # Fail silently - don't interrupt user experience
-                pass
-        
-        # Run in background thread
-        Thread(target=check_updates, daemon=True).start()
     
     def test_profile_apis(self):
         """Test APIs for selected profile"""

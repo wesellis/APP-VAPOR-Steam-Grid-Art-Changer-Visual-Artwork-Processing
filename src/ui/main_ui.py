@@ -30,31 +30,19 @@ class MainUIManager:
         
         # Load and display VAPOR logo
         try:
-            logo_paths = [
-                Path("assets/Vapor_Logo.png"),  # New assets directory
-                Path("Vapor_Logo.png"),  # Legacy location
-                Path(sys.executable).parent / "assets" / "Vapor_Logo.png",  # Next to exe in assets
-                Path(sys.executable).parent / "Vapor_Logo.png",  # Next to exe (legacy)
-                Path(__file__).parent.parent / "assets" / "Vapor_Logo.png",  # Relative to script
-            ]
-            
-            logo_found = False
-            for logo_path in logo_paths:
-                if logo_path.exists():
-                    logo_image = Image.open(logo_path)
-                    # Resize logo to fit header (max height 80px)
-                    logo_height = 80
-                    aspect_ratio = logo_image.width / logo_image.height
-                    logo_width = int(logo_height * aspect_ratio)
-                    logo_image = logo_image.resize((logo_width, logo_height), Image.Resampling.LANCZOS)
-                    self.app.logo_photo = ImageTk.PhotoImage(logo_image)
-                    
-                    logo_label = tk.Label(self.app.header_frame, image=self.app.logo_photo, bg='#2c2f33')
-                    logo_label.pack(side='left', padx=25, pady=10)
-                    logo_found = True
-                    break
-            
-            if not logo_found:
+            logo_path = Path("Vapor_Logo.png")
+            if logo_path.exists():
+                logo_image = Image.open(logo_path)
+                # Resize logo to fit header (max height 80px)
+                logo_height = 80
+                aspect_ratio = logo_image.width / logo_image.height
+                logo_width = int(logo_height * aspect_ratio)
+                logo_image = logo_image.resize((logo_width, logo_height), Image.Resampling.LANCZOS)
+                self.app.logo_photo = ImageTk.PhotoImage(logo_image)
+                
+                logo_label = tk.Label(self.app.header_frame, image=self.app.logo_photo, bg='#2c2f33')
+                logo_label.pack(side='left', padx=25, pady=10)
+            else:
                 # Fallback if logo not found
                 title_label = tk.Label(self.app.header_frame, text="VAPOR", 
                                       font=("Arial", 18, "bold"), fg='#ffffff', bg='#2c2f33')
