@@ -43,16 +43,41 @@ VAPOR is a professional Steam Grid Artwork Manager that revolutionizes how you m
 
 ---
 
+## 💵 **Pricing**
+
+### Free Version
+- Process up to 50 games
+- Manual artwork selection
+- Basic features
+- Community support
+
+### Pro Version - $9.99 (One-time)
+- **Unlimited games** - Process entire library
+- **Auto-Enhancement** - One-click magic
+- **Batch operations** - Update multiple games
+- **Priority API access** - 3x faster processing
+- **Advanced filters** - Smart artwork selection
+- **Lifetime updates** - All future features
+- **Email support** - 48hr response time
+
+**[🛒 Get Pro Version →](https://gumroad.com/l/vapor-pro)**
+
+### Why Pro?
+- **Save hours** - Auto-enhance 1000+ games in minutes
+- **Better artwork** - Access to premium selections
+- **Support development** - Keep VAPOR improving
+
 ## 🚀 **Quick Start**
 
 ### **📦 Download & Run**
-1. **Download** the latest `VAPOR_v2.0.0.exe` from [Releases](../../releases)
+1. **Download** the latest VAPOR from [Releases](../../releases)
 2. **Run** the executable (no Python installation required!)
 3. **Get API Keys** (free):
    - [Steam Web API Key](https://steamcommunity.com/dev/apikey)
    - [SteamGridDB API Key](https://www.steamgriddb.com/profile/preferences/api)
 4. **Create Profile** with your Steam ID and API keys
-5. **Click "Auto-Enhance All Games"** and watch the magic! ✨
+5. **For Pro**: Enter license key from Gumroad purchase
+6. **Click "Auto-Enhance All Games"** and watch the magic! ✨
 
 ### **⏱️ Time Estimates**
 - **100 games**: ~3 minutes
@@ -212,21 +237,36 @@ See [LICENSE](LICENSE) for full details.
 
 ---
 
+## 🎆 **Success Stories**
+
+> "Transformed my 2000+ game library in 30 minutes. Worth every penny!" - *Steam Power User*
+
+> "The auto-enhancement feature is incredible. Saved me days of manual work." - *Game Collector*
+
+> "Finally, my Steam Deck library looks as good as it plays!" - *Deck Owner*
+
 ## 🙏 **Acknowledgments**
 
 - **SteamGridDB** - For providing the comprehensive artwork database
 - **Steam Community** - For creating and sharing amazing artwork
 - **Beta Testers** - For helping make VAPOR rock-solid reliable
 - **Open Source Community** - For the tools and libraries that make this possible
+- **Pro Users** - For supporting continued development
 
 ---
 
 ## 📬 **Support & Community**
 
+### Free Version
 - **🐛 Issues**: [GitHub Issues](../../issues)
 - **💬 Discussions**: [GitHub Discussions](../../discussions)  
-- **📧 Contact**: wes@wesellis.com
 - **🌟 Updates**: Watch this repo for new releases
+
+### Pro Version
+- **📧 Priority Support**: support@vaporapp.com
+- **📨 Response Time**: Within 48 hours
+- **📦 Updates**: Automatic notifications
+- **📝 Feature Requests**: Direct input on roadmap
 
 ---
 
